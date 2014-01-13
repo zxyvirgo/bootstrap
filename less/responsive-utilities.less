@@ -23,6 +23,7 @@
 
 
 // Visibility utilities
+// Note: Deprecated .visible-xs as of v3.1.0
 .visible-xs {
   .responsive-invisibility();
 
@@ -30,6 +31,29 @@
     .responsive-visibility();
   }
 }
+.visible-xs-block {
+  display: none !important;
+
+  @media (max-width: @screen-xs-max) {
+    display: block !important;
+  }
+}
+.visible-xs-inline {
+  display: none !important;
+
+  @media (max-width: @screen-xs-max) {
+    display: inline !important;
+  }
+}
+.visible-xs-inline-block {
+  display: none !important;
+
+  @media (max-width: @screen-xs-max) {
+    display: inline-block !important;
+  }
+}
+
+// Note: Deprecated .visible-sm as of v3.1.0
 .visible-sm {
   .responsive-invisibility();
 
@@ -37,6 +61,29 @@
     .responsive-visibility();
   }
 }
+.visible-sm-block {
+  display: none !important;
+
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    display: block !important;
+  }
+}
+.visible-sm-inline {
+  display: none !important;
+
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    display: inline !important;
+  }
+}
+.visible-sm-inline-block {
+  display: none !important;
+
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    display: inline-block !important;
+  }
+}
+
+// Note: Deprecated .visible-md as of v3.1.0
 .visible-md {
   .responsive-invisibility();
 
@@ -44,6 +91,29 @@
     .responsive-visibility();
   }
 }
+.visible-md-block {
+  display: none !important;
+
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+    display: block !important;
+  }
+}
+.visible-md-inline {
+  display: none !important;
+
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+    display: inline !important;
+  }
+}
+.visible-md-inline-block {
+  display: none !important;
+
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+    display: inline-block !important;
+  }
+}
+
+// Note: Deprecated .visible-lg as of v3.1.0
 .visible-lg {
   .responsive-invisibility();
 
@@ -51,6 +121,28 @@
     .responsive-visibility();
   }
 }
+.visible-lg-block {
+  display: none !important;
+
+  @media (min-width: @screen-lg-min) {
+    display: block !important;
+  }
+}
+.visible-lg-inline {
+  display: none !important;
+
+  @media (min-width: @screen-lg-min) {
+    display: inline !important;
+  }
+}
+.visible-lg-inline-block {
+  display: none !important;
+
+  @media (min-width: @screen-lg-min) {
+    display: inline-block !important;
+  }
+}
+
 
 .hidden-xs {
   @media (max-width: @screen-xs-max) {
@@ -78,11 +170,33 @@
 //
 // Media queries are placed on the inside to be mixin-friendly.
 
+// Note: Deprecated .visible-print as of v3.1.0
 .visible-print {
   .responsive-invisibility();
 
   @media print {
     .responsive-visibility();
+  }
+}
+.visible-print-block {
+  display: none !important;
+
+  @media print {
+    display: block !important;
+  }
+}
+.visible-print-inline {
+  display: none !important;
+
+  @media print {
+    display: inline !important;
+  }
+}
+.visible-print-inline-block {
+  display: none !important;
+
+  @media print {
+    display: inline-block !important;
   }
 }
 
